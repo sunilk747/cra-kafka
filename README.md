@@ -19,6 +19,7 @@ kafka-server-start /usr/local/etc/kafka/server.properties
 ### Kafka Producer
 ```
 from kafkatrial.producer.producer import Producer
+# Send a message to topic named 'data-importer'
 p = Producer(bootstrap_servers='localhost:9092', client_id='openshift-service-name')
 msg = {'some-key': 'some-value'}
 p.send(topic='data-importer', value=msg)
@@ -28,6 +29,7 @@ p.send(topic='data-importer', value=msg)
 ```
 from kafkatrial.consumer.consumer import Consumer
 topics = ['ingestion', 'data-importer']
+# Initialize a consumer to list to multiple topics at once.
 c = Consumer(bootstrap_servers='localhost:9092', group_id='openshift-service-name', topics=topics)
 
 Seek Last N messages
