@@ -2,6 +2,12 @@
 
 import setuptools
 
+
+def _get_requirements():
+    with open('requirements.txt') as _file:
+        return _file.readlines()
+
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
@@ -20,4 +26,5 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ],
+    install_requires=_get_requirements(),
 )
