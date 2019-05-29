@@ -20,7 +20,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     license='APACHE 2.0',
-    url="https://github.com/sunilk747/crc_kafka",
+    url="https://github.com/sunilk747/cra-kafka",
     packages=setuptools.find_packages(exclude=['tests']),
     classifiers=[
         "Programming Language :: Python :: 3",
