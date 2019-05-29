@@ -2,7 +2,6 @@
 
 import setuptools
 
-
 def _get_requirements():
     with open('requirements.txt') as _file:
         return _file.readlines()
